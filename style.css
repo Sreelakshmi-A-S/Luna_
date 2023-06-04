@@ -1,0 +1,53 @@
+/* style.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+#period-log-form {
+  margin-bottom: 25px;
+}
+
+#cycle-data {
+  border: 1px solid #957c7c;
+  padding: 25px 50px;
+  width: 200px;
+}
+
+input[type="date"] {
+  padding: 5px;
+  font-size: 14px;
+}
+
+button {
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+p {
+  margin: 5px 0;
+}
+
+span {
+  font-weight: bold;
+}
