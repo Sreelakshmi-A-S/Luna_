@@ -13,6 +13,7 @@ function logPeriod() {
       nextPeriod = formatDate(nextPeriod);
   
       // Update the UI with the retrieved data
+      document.getElementById('cycle-length').textContent = cycleLength;
       document.getElementById('last-period').textContent = lastPeriod;
       document.getElementById('next-period').textContent = nextPeriod;
     }

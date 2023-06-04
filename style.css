@@ -2,7 +2,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #ff2478;
+  background-color: #ff2469;
   margin: 0;
   padding: 20px;
   display: flex;
@@ -20,16 +20,20 @@ h1 {
 
 #period-log-form {
   margin-bottom: 25px;
-  background-color: #e091aed3;
+  background-color: #e8bdbdd3;
   padding: 20px;
   width: 300px;
   margin: 0 auto;
+  border-radius: 8px;
 }
 
 #cycle-data {
   border: 1px solid #957c7c;
   padding: 25px 50px;
   width: 200px;
+  background-color: #fffbfdd3;
+  border-radius: 1px;
+  margin-top: 25px;
 }
 
 input[type="date"],
@@ -49,6 +53,7 @@ button {
   background-color: #965569;
   color: white;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
   display: block;
   margin: 0 auto;
