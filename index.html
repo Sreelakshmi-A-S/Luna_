@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Luna Period Tracker</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Luna Period Tracker</h1>
+  
+  <div id="period-log-form">
+    <h2>Log Period Start Date</h2>
+    <input type="date" id="start-date-input">
+    <button onclick="logPeriod()">Log Period</button>
+  </div>
+
+  <div id="cycle-data">
+    <h2>Menstrual Cycle Data</h2>
+    <p>Cycle Length: <span id="cycle-length"></span> days</p>
+    <p>Last Period: <span id="last-period"></span></p>
+    <p>Next Period: <span id="next-period"></span></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
