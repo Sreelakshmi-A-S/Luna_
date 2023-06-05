@@ -37,4 +37,10 @@ function logPeriod() {
   
     return day + '-' + month + '-' + year;
   }
-    
+
+  // script.js
+
+function goToNextPage() {
+  // Redirect to the desired URL
+  window.location.href = "second_page.html";
+}

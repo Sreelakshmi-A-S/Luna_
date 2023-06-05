@@ -9,7 +9,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 50vh;
+  min-height: 80vh;
   text-align: center;
 }
 
@@ -38,7 +38,7 @@ h2 {
   width: 200px;
   background-color: #fffbfdd3;
   border-radius: 7px;
-  margin-top: 25px;
+  margin-top: 30px;
   font-size: 18px;
 }
 
@@ -77,3 +77,19 @@ p {
 span {
   font-weight: bold;
 }
+
+.more-info-button {
+  padding: 35px 70px;
+  font-size: 40px;
+  background-color: #870c31;
+  color: white;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+  display: block;
+  margin-top: 50px;
+  }
+  
+  .more-info-button:hover {
+  background-color: #8c1f3c;
+  }
