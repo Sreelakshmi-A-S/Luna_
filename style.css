@@ -9,38 +9,44 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 50vh;
   text-align: center;
 }
 
 h1 {
   text-align: center;
   margin-bottom: 30px;
+  font-size: 50px;
 }
 
+h2 {
+  font-size: 25px;
+}
 #period-log-form {
   margin-bottom: 25px;
   background-color: #e8bdbdd3;
-  padding: 20px;
+  padding: 50px 70px;
   width: 300px;
   margin: 0 auto;
   border-radius: 8px;
+  font-size: 18px;
 }
 
 #cycle-data {
   border: 1px solid #957c7c;
-  padding: 25px 50px;
+  padding: 10px 80px;
   width: 200px;
   background-color: #fffbfdd3;
-  border-radius: 1px;
+  border-radius: 7px;
   margin-top: 25px;
+  font-size: 18px;
 }
 
 input[type="date"],
 input[type="number"],
 button {
-  padding: 8px;
-  font-size: 15px;
+  padding: 15px 50px;
+  font-size: 20px;
   width: 225px;
   display: block;
   margin: 0 auto;
@@ -48,7 +54,7 @@ button {
 }
 
 button {
-  padding: 8px 12px;
+  padding: 13px 75px;
   font-size: 15px;
   background-color: #965569;
   color: white;
@@ -57,6 +63,7 @@ button {
   cursor: pointer;
   display: block;
   margin: 0 auto;
+  font-size: 15px;
 } 
 
 button:hover {
