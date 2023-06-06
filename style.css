@@ -94,6 +94,28 @@ span {
   background-color: #8c1f3c;
 }
 
+#chatbot-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #d0caca;
+  border: 1px solid #c4c1c1;
+  padding: 5px;
+  width: 150px;
+}
+
+.chatbot-image {
+  width: 125px;
+  height: 125px;
+  margin-bottom: 5px;
+}
+
+.chatbot-message {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+
 /* .content {
   text-align: left;
   margin-left: 200px;
