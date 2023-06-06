@@ -44,3 +44,8 @@ function goToNextPage() {
   // Redirect to the desired URL
   window.location.href = "second_page.html";
 }
+
+function goBack() {
+  // Redirect to the desired URL
+  window.location.href = "index.html";
+}
