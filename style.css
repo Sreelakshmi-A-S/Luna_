@@ -16,11 +16,11 @@ body {
 h1 {
   text-align: center;
   margin-bottom: 30px;
-  font-size: 50px;
+  font-size: 70px;
 }
 
 h2 {
-  font-size: 25px;
+  font-size: 38px;
 }
 #period-log-form {
   margin-bottom: 25px;
@@ -34,7 +34,7 @@ h2 {
 
 #cycle-data {
   border: 1px solid #957c7c;
-  padding: 10px 80px;
+  padding: 60px 100px;
   width: 200px;
   background-color: #fffbfdd3;
   border-radius: 7px;
@@ -100,13 +100,14 @@ span {
   right: 20px;
   background-color: #d0caca;
   border: 1px solid #c4c1c1;
-  padding: 5px;
+  padding: 20px;
   width: 150px;
+  border-radius:8px;
 }
 
 .chatbot-image {
-  width: 125px;
-  height: 125px;
+  width: 100%;
+  height: 100%;
   margin-bottom: 5px;
 }
 
