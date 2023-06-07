@@ -139,7 +139,7 @@ span {
 }
 
 .go-back-button {
-  padding: 15px 30px;
+  padding: 15px 75px;
   font-size: 18px;
   background-color: #870c31;
   color: white;
@@ -154,3 +154,44 @@ span {
   background-color: #8c1f3c;
 }
 
+/* body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.calendar-header {
+  grid-column: 1 / span 7;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.calendar-cell {
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+.calendar-cell.current-month {
+  background-color: #fff;
+} */
+
+.calendar-cell.period-date {
+  background-color: #ff0000;
+  color: #fff;
+  border-radius: 50%;
+}

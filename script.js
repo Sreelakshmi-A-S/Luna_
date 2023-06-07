@@ -49,3 +49,30 @@ function goBack() {
   // Redirect to the desired URL
   window.location.href = "third_page.html";
 }
+
+// function generateCalendar() {
+//   const calendar = document.getElementById('calendar');
+
+//   const currentDate = new Date();
+//   const currentYear = currentDate.getFullYear();
+//   const currentMonth = currentDate.getMonth();
+//   const nextPeriodMonth = currentMonth + 1; // Example: Assuming next period is in the following month
+
+//   const daysInMonth = new Date(currentYear, nextPeriodMonth + 1, 0).getDate();
+
+//   // Generate calendar days
+//   for (let day = 1; day <= daysInMonth; day++) {
+//     const calendarCell = document.createElement('div');
+//     calendarCell.textContent = day;
+//     calendarCell.classList.add('calendar-cell');
+//     if (nextPeriodMonth === currentMonth) {
+//       calendarCell.classList.add('current-month');
+//     }
+//     if (day === 10 || day === 15) {
+//       calendarCell.classList.add('period-date');
+//     }
+//     calendar.appendChild(calendarCell);
+//   }
+// }
+
+// generateCalendar();
