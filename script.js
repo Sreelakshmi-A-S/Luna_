@@ -50,6 +50,12 @@ function goBack() {
   window.location.href = "third_page.html";
 }
 
+function goBack2() {
+  // Redirect to the desired URL
+  window.location.href = "index.html";
+}
+
+
 // function generateCalendar() {
 //   const calendar = document.getElementById('calendar');
 
