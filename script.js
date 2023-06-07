@@ -47,5 +47,5 @@ function goToNextPage() {
 
 function goBack() {
   // Redirect to the desired URL
-  window.location.href = "index.html";
+  window.location.href = "third_page.html";
 }
