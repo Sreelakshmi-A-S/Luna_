@@ -195,3 +195,24 @@ h1 {
   color: #fff;
   border-radius: 50%;
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.element {
+  animation: fadeIn 1s ease;
+}
+
+.box {
+  transition: transform 0.3s ease;
+}
+
+.box:hover {
+  transform: scale(1.2);
+}
