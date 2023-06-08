@@ -55,7 +55,6 @@ function goBack2() {
   window.location.href = "index.html";
 }
 
-
 // function generateCalendar() {
 //   const calendar = document.getElementById('calendar');
 
