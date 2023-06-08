@@ -3,14 +3,52 @@
 <head>
   <title>Menstrual Health and Hygiene Information</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slide-up 1s ease forwards;
+    }
+
+    @keyframes slide-up {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .content h2 {
+      opacity: 0;
+      animation: fade-in 1s ease 1s forwards;
+    }
+
+    .content p {
+      opacity: 0;
+      animation: fade-in 1s ease 2s forwards;
+    }
+
+    .content ul {
+      opacity: 0;
+      animation: fade-in 1s ease 3s forwards;
+    }
+
+    .go-back-button {
+      opacity: 0;
+      animation: fade-in 1s ease 4s forwards;
+    }
+
+    @keyframes fade-in {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  </style>
 </head>
 <body>
   <h1>Menstrual Health and Hygiene</h1>
-  
   <div class="content">
     <h2>What is Menstruation?</h2>
     <p>Menstruation, commonly known as a period, is the shedding of the uterine lining that occurs on a monthly basis in females of reproductive age. It is a natural process that prepares the body for potential pregnancy.</p>
-    
     <h2>Maintaining Menstrual Hygiene</h2>
     <p>It is important to maintain good menstrual hygiene to ensure comfort and prevent infections. Here are some tips:</p>
     <ul>
@@ -20,7 +58,7 @@
       <li>Keep the genital area clean and dry.</li>
       <li>Dispose of used menstrual products properly.</li>
     </ul>
-    
+
     <h2>Managing Menstrual Discomfort</h2>
     <p>Many individuals experience discomfort during menstruation. Here are some ways to manage it:</p>
     <ul>
@@ -29,11 +67,10 @@
       <li>Practice relaxation techniques like deep breathing or meditation.</li>
       <li>Consider over-the-counter pain relievers with your doctor's guidance.</li>
     </ul>
-    
+
     <h2>Seeking Medical Advice</h2>
     <p>If you experience severe menstrual pain, heavy bleeding, or any unusual symptoms, it is important to seek medical advice. Your healthcare provider can help diagnose and manage any underlying conditions.</p>
   </div>
-
   <button class="go-back-button" onclick="goBack()">Detailed Info</button>
 
   <script src="script.js"></script>
