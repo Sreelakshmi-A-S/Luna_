@@ -25,7 +25,7 @@ h2 {
 #period-log-form {
   margin-bottom: 25px;
   background-color: #e8bdbdd3;
-  padding: 70px 190px;
+  padding: 70px 130px;
   width: 300px;
   margin: 0 auto;
   border-radius: 8px;
@@ -33,17 +33,17 @@ h2 {
 }
 
 #cycle-data {
-  border: 1px solid #957c7c;
+  /* border: 1px solid #957c7c; */
   padding: 60px 100px;
-  width: 200px;
-  background-color: #fffbfdd3;
+  width: 350px;
+  /* background-color: #fffbfdd3; */
   border-radius: 7px;
   margin-top: 30px;
   font-size: 18px;
 }
 
 #cycle-data p {
-  font-size: 101%;
+  font-size: 178%;
 }
 
 input[type="date"],
