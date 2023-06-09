@@ -82,6 +82,17 @@ span {
   font-weight: bold;
 }
 
+.map-button {
+  background-color: #870c31;
+  color: #ffffff; 
+  opacity: 0;
+  animation: fade-in 1s ease 1s forwards;
+}
+
+.map-button:hover {
+  background-color: #8c1f3c;
+}
+
 #calendar-interface {
   width: center;
   margin: 1px auto;

@@ -52,6 +52,11 @@ function goBack() {
 
 function goBack2() {
   // Redirect to the desired URL
+  window.location.href = "next.html";
+}
+
+function goBack3() {
+  // Redirect to the desired URL
   window.location.href = "index.html";
 }
 
