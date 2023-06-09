@@ -30,12 +30,32 @@
     .map-button {
       opacity: 0;
       animation: fade-in 1s ease 1s forwards;
+      margin-top: 10%;
     }
 
     @keyframes fade-in {
       0% { opacity: 0; }
       100% { opacity: 1; }
     }
+
+    @keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+  .blink-link {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ff2469;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    animation: blink 1.25s infinite;
+  }
 
   </style>
 </head>
@@ -44,6 +64,7 @@
 
   <div id="map">
     <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=75.0986%2C7.8150%2C77.6953%2C12.7954&amp;layer=mapnik" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+    <a href="https://www.google.com/maps/search/menstrual+health+hospitals+in+kerala" target="_blank" class="blink-link">Click here to see the location of various Hospitals in Kerala specialized in Menstrual Health</a>
   </div>
 
   <button class="map-button" onclick="goBack3()">Go back</button>
