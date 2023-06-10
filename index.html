@@ -10,7 +10,7 @@
     #chatbot-widget {
       opacity: 0;
       transform: translateX(-20px);
-      animation: slide-in 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+      animation: slide-in 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s forwards;
     }
 
     @keyframes slide-in {
@@ -23,13 +23,13 @@
       height: 100px;
       opacity: 0;
       transform: translateY(20px);
-      animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) 1s forwards;
+      animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) 2s forwards;
     }
 
     .chatbot-message {
       opacity: 0;
       transform: translateY(20px);
-      animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) 2s forwards;
+      animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) 2.5s forwards;
     }
 
     @keyframes fade-in {
@@ -37,18 +37,6 @@
       100% { opacity: 1; transform: translateY(0); }
     }
 
-    /* Additional styling for the calendar */
-    .calendar-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 20px;
-    }
-
-    .calendar {
-      width: 280px;
-      text-align: center;
-    }
   </style>
 </head>
 <body>
@@ -58,7 +46,7 @@
     <h2>Last Period Start Date</h2>
     <input type="date" id="start-date-input" style="display: block; margin: 0 auto; width: 55%; height:24%;">
     <input type="number" id="cycle-length-input" placeholder="Cycle Length" style="display: block; margin: 10px auto; width: 55%; height: 24%;">    
-    <button onclick="logPeriod()" style="animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) 1s forwards;">Log Period</button>
+    <button onclick="logPeriod()" style="animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) 1.5s forwards;">Log Period</button>
   </div>
 
   <div id="cycle-data" style="animation: slide-in 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.75s forwards;">
@@ -73,8 +61,8 @@
     <div class="chatbot-message">Hello! Welcome to Luna: The Period Tracker</div>
   </div>
 
-  <button class="more-info-button" onclick="goToNextPage()" style="animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) 2s forwards;">More Info</button>
+  <button class="more-info-button" onclick="goToNextPage()" style="animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) 2.75s forwards;">More Info</button>
   
   <script src="script.js"></script>
 </body>
-</html>
+</html> 
