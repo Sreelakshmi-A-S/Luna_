@@ -21,13 +21,13 @@ function logPeriod() {
   
   function calculateNextPeriod(lastPeriod, cycleLength) {
     var nextPeriodDate = new Date(lastPeriod);
-    nextPeriodDate.setDate(nextPeriodDate.getDate() + cycleLength -1);
+    nextPeriodDate.setDate(nextPeriodDate.getDate() + cycleLength);
     nextPeriodDate.setHours(0, 0, 0, 0);
     return nextPeriodDate;
   }
   
   function formatDate(date) {
-    var day = date.getDate();
+    var day = date.getDate() -1;
     var month = date.getMonth() + 1;
     var year = date.getFullYear();
   
