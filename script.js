@@ -21,7 +21,7 @@ function logPeriod() {
   
   function calculateNextPeriod(lastPeriod, cycleLength) {
     var nextPeriodDate = new Date(lastPeriod);
-    nextPeriodDate.setDate(nextPeriodDate.getDate() + cycleLength);
+    nextPeriodDate.setDate(nextPeriodDate.getDate() + cycleLength -1);
     nextPeriodDate.setHours(0, 0, 0, 0);
     return nextPeriodDate;
   }
