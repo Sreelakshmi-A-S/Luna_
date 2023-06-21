@@ -224,3 +224,33 @@ th {
 td.predicted-month {
   background-color: #e6f7ff;
 }
+
+.calendar-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.calendar {
+  border-collapse: collapse;
+  width: 48%;
+}
+
+.calendar td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.calendar .predicted-month {
+  color: #000000;
+}
+
+.calendar .predicted-period {
+  background-color: #fffccc;
+}
+
+.calendar .today {
+  background-color: #f5f5f5;
+}

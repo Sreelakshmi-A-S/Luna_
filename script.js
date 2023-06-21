@@ -132,6 +132,8 @@ function renderCalendar(periodStart, cycleLength) {
   
     let date = 1;
     let calendarHTML = `
+    <div class="row">
+    <div class="calendar">
       <h2>${getMonthName(month)} ${year}</h2>
       <table>
         <tr>
@@ -166,13 +168,108 @@ function renderCalendar(periodStart, cycleLength) {
         break;
       }
     }
+
+    calendarHTML += `
+        </table>
+      </div>
+  `;
+
+  const nextMonth = (month + 1) % 12;
+  const nextYear = year + Math.floor((month + 1) / 12);
+
+  const nextDaysInMonth = new Date(nextYear, nextMonth + 1, 0).getDate();
+  const nextFirstDay = new Date(nextYear, nextMonth, 1).getDay();
+
+  let nextDate = 1;
+
+  calendarHTML += `
+    </table>
+  </div>
+  <div class="calendar">
+    <h2>${getMonthName(nextMonth)} ${nextYear}</h2>
+    <table>
+      <tr>
+        <th>Sun</th>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+      </tr>
+  `;
   
-    calendarHTML += '</table>';
-    return calendarHTML;
+//   const currentDate = new Date(); // Get the current date
+
+//   for (let i = 0; i < 6; i++) {
+//     calendarHTML += '<tr>';
+
+//     for (let j = 0; j < 7; j++) {
+//       if (i === 0 && j < nextFirstDay) {
+//         calendarHTML += '<td></td>';
+//       } else if (nextDate <= nextDaysInMonth) {
+//         const dayClass = (nextDate <= 4 && month === currentDate.getMonth()) ? 'predicted-period' : '';
+//         calendarHTML += `<td class="${dayClass}">${nextDate}</td>`;
+//         nextDate++;
+//       } else {
+//         calendarHTML += '<td></td>';
+//       }
+//     }
+
+//     calendarHTML += '</tr>';
+
+//     if (nextDate > nextDaysInMonth) {
+//       break;
+//     }
+//   }
+
+//   calendarHTML += `
+//     </table>
+//   </div>
+// </div>
+// `;
+
+//   return calendarHTML;
+
+const currentDate = new Date(); // Get the current date
+const nextPeriodDate = calculateNextPeriod(currentDate, cycleLength); // Calculate the next period date
+
+for (let i = 0; i < 6; i++) {
+  calendarHTML += '<tr>';
+
+  for (let j = 0; j < 7; j++) {
+    if (i === 0 && j < nextFirstDay) {
+      calendarHTML += '<td></td>';
+    } else if (nextDate <= nextDaysInMonth) {
+      let dayClass = '';
+      if (nextDate <= 4 && month === currentDate.getMonth()) {
+        dayClass = 'predicted-period';
+      } else if (nextDate === nextPeriodDate.getDate() && nextMonth === nextPeriodDate.getMonth() && nextYear === nextPeriodDate.getFullYear()) {
+        dayClass = 'next-period';
+      }
+      calendarHTML += `<td class="${dayClass}">${nextDate}</td>`;
+      nextDate++;
+    } else {
+      calendarHTML += '<td></td>';
+    }
   }
-  
-  // Example usage:
-  renderCalendar('2023-06-01', 28);
+
+  calendarHTML += '</tr>';
+
+  if (nextDate > nextDaysInMonth) {
+    break;
+  }
+}
+
+calendarHTML += `
+      </table>
+    </div>
+  </div>
+`;
+
+return calendarHTML;
+
+}
   
 function goToNextPage() {
   window.location.href = "second_page.html";
