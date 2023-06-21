@@ -125,10 +125,7 @@ function renderCalendar(periodStart, cycleLength) {
   // Append the calendar to the container
   calendarContainer.appendChild(calendar);
 }
-
-// Example usage: renderCalendar("2023-06-01", 28);
-
-  
+ 
   function generateCalendarHTML(year, month, cycleLength) {
     const daysInMonth = new Date(year, month + 1, 0).getDate();
     const firstDay = new Date(year, month, 1).getDay();
