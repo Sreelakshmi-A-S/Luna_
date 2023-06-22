@@ -52,42 +52,88 @@
       0% { opacity: 0; }
       100% { opacity: 1; }
     }
-  </style>
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+    }
+
+    .max-width {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .contact-content {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slide-up 3s ease 1.5s forwards;
+    }
+
+    .column {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .row i {
+      margin-right: 10px;
+    }
+
+    .column.right {
+      margin-top: 40px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fade-in 3s ease forwards;
+    }
+
+    .field label {
+      margin-bottom: 5px;
+    }
+
+    .field input,
+    .field textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .button-area {
+      text-align: center;
+      opacity: 0;
+      animation: fade-in 7s ease forwards;
+    }
+
+    .button-area button {
+      padding: 10px 20px;
+      background-color: #870c31;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+</style>
 </head>
 <body>
-  <!-- contact section start -->
   <section class="contact" id="contact">
     <div class="max-width">
         <h2 class="title"></h2>
-        <div class="contact-content">
-            <div class="column left">
-                <div class="icons">
-                    <div class="row">
-                        <i class="fas fa-user"></i>
-                        <div class="info">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div class="info">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <i class="fas fa-envelope" ></i>
-                        <div class="info">
-                        </div>
-                    </div>
-                        <div class="row"></div>
-                        <div class="info">
-                            <a onclick="window.location.href='mailto:sreelakshmias214@gmail.com'">
-                                <i class="fas fa-envelope fa-lg large-icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                </div>
+        <div class="contact-content">    
             <div class="column right">
-                <div class="text">Message</div>
                 <form action="#">
                     <div class="fields">
                         <div class="field name">
