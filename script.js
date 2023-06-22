@@ -198,38 +198,7 @@ function renderCalendar(periodStart, cycleLength) {
         <th>Sat</th>
       </tr>
   `;
-  
-//   const currentDate = new Date(); // Get the current date
 
-//   for (let i = 0; i < 6; i++) {
-//     calendarHTML += '<tr>';
-
-//     for (let j = 0; j < 7; j++) {
-//       if (i === 0 && j < nextFirstDay) {
-//         calendarHTML += '<td></td>';
-//       } else if (nextDate <= nextDaysInMonth) {
-//         const dayClass = (nextDate <= 4 && month === currentDate.getMonth()) ? 'predicted-period' : '';
-//         calendarHTML += `<td class="${dayClass}">${nextDate}</td>`;
-//         nextDate++;
-//       } else {
-//         calendarHTML += '<td></td>';
-//       }
-//     }
-
-//     calendarHTML += '</tr>';
-
-//     if (nextDate > nextDaysInMonth) {
-//       break;
-//     }
-//   }
-
-//   calendarHTML += `
-//     </table>
-//   </div>
-// </div>
-// `;
-
-//   return calendarHTML;
 
 const currentDate = new Date(); // Get the current date
 const nextPeriodDate = calculateNextPeriod(currentDate, cycleLength); // Calculate the next period date
@@ -286,4 +255,6 @@ function goBack2() {
 function goBack3() {
   window.location.href = "index.html";
 }
+
+
 
