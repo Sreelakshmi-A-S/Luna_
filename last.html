@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <h1 style="animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;">Contact Us</h1>
+  <h1 style="animation: fade-in 3s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;">Contact Us</h1>
   <link rel="stylesheet" type="text/css" href="style.css">
 <style>
     .content {
@@ -52,6 +52,11 @@
       0% { opacity: 0; }
       100% { opacity: 1; }
     }
+
+    .title {
+    opacity: 0;
+    animation: fade-in 5s ease forwards;
+    } 
 
     body {
       font-family: Arial, sans-serif;
@@ -131,7 +136,7 @@
 <body>
   <section class="contact" id="contact">
     <div class="max-width">
-        <h2 class="title"></h2>
+        <h2 class="title">We value your feedback! Share your thoughts or provide us with any feedback on your experience..</h2>
         <div class="contact-content">    
             <div class="column right">
                 <form action="#">
@@ -147,16 +152,17 @@
                         <input type="text" placeholder="Subject" required>
                     </div>
                     <div class="field textarea">
-                        <textarea cols="30" rows="10" placeholder="Write your Feedback.." required></textarea>
+                        <textarea cols="80" rows="10" placeholder="Write your Feedback.." required></textarea>
                     </div>
                     <div class="button-area">
-                        <button class="go-back-button" onclick="window.location.href='mailto:sreelakshmias214@gmail.com'">Send Your Feedback</button>
+                        <button class="go-back-button" onclick="window.location.href='mailto:sreelakshmias214@gmail.com'">Send</button>
                     </div>
                 </form>
             </div>
         </div>
         </div>
     </div>
+  </section>
 
   <script src="script.js"></script>
 </body>
