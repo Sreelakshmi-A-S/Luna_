@@ -67,5 +67,27 @@
   <button class="more-info-button" onclick="goToNextPage()" style="animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) 6.75s forwards;">More Info</button>
   
   <script src="script.js"></script>
+  <script>
+    // Get the cycle length input element
+    var cycleLengthInput = document.getElementById("cycle-length-input");
+  
+    // Add event listener to listen for input changes
+    cycleLengthInput.addEventListener("input", function() {
+      // Get the cycle length value
+      var cycleLength = parseInt(cycleLengthInput.value);
+  
+      // Get the chatbot message element
+      var chatbotMessage = document.querySelector("#chatbot-widget .chatbot-message");
+  
+      // Display response based on the cycle length
+      if (cycleLength < 21) {
+        chatbotMessage.textContent = "Your cycle length seems to be shorter than average. It's recommended to consult a doctor.";
+      } else if (cycleLength > 35) {
+        chatbotMessage.textContent = "Your cycle length seems to be longer than average. It's recommended to consult a doctor.";
+      } else {
+        chatbotMessage.textContent = "Your cycle length falls within the average range.";
+      }
+    });
+  </script>
 </body>
 </html> 
