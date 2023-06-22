@@ -51,9 +51,6 @@ function renderCalendar(periodStart, cycleLength) {
   // Get the current date
   var currentDate = new Date();
 
-  // for (var monthOffset = 0; monthOffset < 2; monthOffset++) {
-  //   var displayMonth = new Date(startYear, startMonth + monthOffset, 1);
-  
   // Set the calendar header with month and year
   var headerRow = document.createElement("tr");
   var headerCell = document.createElement("th");
