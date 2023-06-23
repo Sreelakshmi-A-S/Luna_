@@ -16,7 +16,7 @@ function logPeriod() {
     document.getElementById('next-period').textContent = nextPeriod;
 
     // Render the calendar
-    renderCalendar(startDate, cycleLength);
+    renderCalendar(startDate,35);
   }
 }
 
