@@ -59,6 +59,21 @@
 
   <div id="calendarContainer"></div>
 
+  <div id="compare-log-form">
+    <h2>Enter Last 3 Period Dates</h2>
+    <input type="date" id="start-date-input1" placeholder="First Date" style="display: block; margin: 0 auto; width: 55%; height:24%;">
+    <input type="date" id="start-date-input2" placeholder="Second Date" style="display: block; margin: 10px auto; width: 55%; height:24%;">
+    <input type="date" id="start-date-input3" placeholder="Third Date" style="display: block; margin: 10px auto; width: 55%; height:24%;">
+    <button onclick="compareCycles()" style="animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) 2s forwards;">Compare Cycles</button>
+  </div>
+  
+  <div id="cycle-data" style="animation: slide-in 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 7s forwards;">
+    <h2>Comparison Results</h2>
+    <p>Cycle 1: <span id="cycle1"></span> days</p>
+    <p>Cycle 2: <span id="cycle2"></span> days</p>
+    <p>Cycle 3: <span id="cycle3"></span> days</p>
+  </div>
+  
   <div id="chatbot-widget" style="animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) 5.5s forwards;">
     <img src="chatbot.jpeg" alt="Chatbot" class="chatbot-image">
     <div class="chatbot-message">Hello! Welcome to Luna: The Period Tracker</div>
@@ -88,6 +103,35 @@
         chatbotMessage.textContent = "Your cycle length falls within the average range.";
       }
     });
+
+  function compareCycles() {
+  var startDate1 = document.getElementById('start-date-input1').value;
+  var startDate2 = document.getElementById('start-date-input2').value;
+  var startDate3 = document.getElementById('start-date-input3').value;
+
+  if (startDate1 && startDate2 && startDate3) {
+    var date1 = new Date(startDate1);
+    var date2 = new Date(startDate2);
+    var date3 = new Date(startDate3);
+
+    var cycle1 = getDayDifference(date2, date1);
+    var cycle2 = getDayDifference(date3, date2);
+    var cycle3 = getDayDifference(date1, date2);
+
+    document.getElementById('cycle1').textContent = cycle1;
+    document.getElementById('cycle2').textContent = cycle2;
+    document.getElementById('cycle3').textContent = cycle3;
+  } else {
+    alert("Please enter all 3 period dates");
+  }
+}
+
+function getDayDifference(date1, date2) {
+  var oneDay = 24 * 60 * 60 * 1000;
+  var diffDays = Math.round(Math.abs((date1 - date2) / oneDay));
+  return diffDays;
+}
+
   </script>
 </body>
 </html> 
