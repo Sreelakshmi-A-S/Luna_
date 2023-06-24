@@ -189,10 +189,10 @@ function compareCycles() {
     var cycleDifference = Math.abs(cycle2 - cycle1);
     var cycleStatus = document.getElementById('cycle-status');
 
-    if (cycleDifference <= 5) {
-      printMessageLetterByLetter("Your menstrual cycle is normal.", 'cycle-status');
+    if (cycleDifference <= 8) {
+      printMessageLetterByLetter("Your menstrual cycle is normal. Stay healthy :)", 'cycle-status');
     } else {
-      printMessageLetterByLetter("Your menstrual cycle is not normal. It is recommended to visit a doctor.", 'cycle-status');
+      printMessageLetterByLetter("Your menstrual cycle seems to be not normal. It is recommended to visit a doctor.", 'cycle-status');
     }
   } else {
     alert("Please enter all 3 period dates");
