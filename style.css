@@ -261,3 +261,19 @@ td.predicted-month {
 #compare-log-form button:hover {
   background-color: #8c1f3c;
 }
+
+.animated-form {
+  animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) 0.5s forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
