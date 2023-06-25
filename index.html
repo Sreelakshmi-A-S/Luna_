@@ -32,6 +32,23 @@
       animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) 6.5s forwards;
     }
 
+    .chatbot-button {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    }
+
+    .custom-button {
+    font-size: 18px;
+    padding: 2px 20px;
+    background-color: #ff3366;
+    color: #fff;
+    }
+
     @keyframes fade-in {
       0% { opacity: 0; transform: translateY(20px); }
       100% { opacity: 1; transform: translateY(0); }
@@ -73,11 +90,21 @@
     <p>Cycle 2: <span id="cycle2"></span> days</p>
     <div id="cycle-status"></div>
   </div>
+
+  <!-- <div id="chatbot-widget" style="animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) 5.5s forwards;">
+    <a href="https://t.me/Luna_thebot" target="_blank">
+      <img src="chatbot.jpeg" alt="Chatbot" class="chatbot-image">
+      <div class="chatbot-message">Hello! Welcome to Luna: The Period Tracker</div>
+      <button class="chatbot-button">Chat with Luna</button>
+    </a>
+  </div> -->
+
   <div id="chatbot-widget" style="animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) 5.5s forwards;">
     <img src="chatbot.jpeg" alt="Chatbot" class="chatbot-image">
     <div class="chatbot-message">Hello! Welcome to Luna: The Period Tracker</div>
+    <button class="chatbot-button" onclick="window.open('https://t.me/Luna_thebot', '_blank')">Chat with Luna</button>
   </div>
-
+    
   <button class="more-info-button" onclick="goToNextPage()" style="animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) 6.75s forwards;">More Info</button>
   
   <script src="script.js"></script>
@@ -102,56 +129,6 @@
         chatbotMessage.textContent = "Your cycle length falls within the average range.";
       }
     });
-
-// function printMessageLetterByLetter(message, elementId) {
-//   var element = document.getElementById(elementId);
-//   var index = 0;
-
-//   function printNextLetter() {
-//     if (index < message.length) {
-//       element.textContent += message[index];
-//       index++;
-//       setTimeout(printNextLetter, 100); // Adjust the delay between letters (in milliseconds)
-//     }
-//   }
-
-//   printNextLetter();
-// }
-
-// function compareCycles() {
-//   var startDate1 = document.getElementById('start-date-input1').value;
-//   var startDate2 = document.getElementById('start-date-input2').value;
-//   var startDate3 = document.getElementById('start-date-input3').value;
-
-//   if (startDate1 && startDate2 && startDate3) {
-//     var date1 = new Date(startDate1);
-//     var date2 = new Date(startDate2);
-//     var date3 = new Date(startDate3);
-
-//     var cycle1 = getDayDifference(date2, date1);
-//     var cycle2 = getDayDifference(date3, date2);
-
-//     document.getElementById('cycle1').textContent = cycle1;
-//     document.getElementById('cycle2').textContent = cycle2;
-
-//     var cycleDifference = Math.abs(cycle2 - cycle1);
-//     var cycleStatus = document.getElementById('cycle-status');
-
-//     if (cycleDifference <= 5) {
-//       printMessageLetterByLetter("Your menstrual cycle is normal.", 'cycle-status');
-//     } else {
-//       printMessageLetterByLetter("Your menstrual cycle is not normal. It is recommended to visit a doctor.", 'cycle-status');
-//     }
-//   } else {
-//     alert("Please enter all 3 period dates");
-//   }
-// }
-
-// function getDayDifference(date1, date2) {
-//   var oneDay = 24 * 60 * 60 * 1000;
-//   var diffDays = Math.round(Math.abs((date1 - date2) / oneDay));
-//   return diffDays;
-// }
 
 function printMessageLetterByLetter(message, elementId) {
   var element = document.getElementById(elementId);
