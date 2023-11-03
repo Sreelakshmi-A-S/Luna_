@@ -1,11 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Luna: The Period Tracker</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="style.css">
   <style>
     #period-log-form,
     #cycle-data,
@@ -64,9 +60,6 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
   <h1 style="animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) 4s forwards;">Luna: The Period Tracker</h1>
   
   <div id="period-log-form">
@@ -99,9 +92,6 @@
     <p>Cycle 1: <span id="cycle1"></span> days</p>
     <p>Cycle 2: <span id="cycle2"></span> days</p>
     <div id="cycle-status"></div>
-  </div>
-  </div>
-  </div>
   </div>
   <div id="chatbot-widget" style="animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) 5.5s forwards;">
     <img src="chatbot.jpeg" alt="Chatbot" class="chatbot-image">
@@ -186,9 +176,6 @@ function getDayDifference(date1, date2) {
   var diffDays = Math.round(Math.abs((date1 - date2) / oneDay));
   return diffDays;
 }
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="script.js"></script>
   </script>
 </body>
